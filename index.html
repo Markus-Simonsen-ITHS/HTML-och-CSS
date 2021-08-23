@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky color="blue"></a-sky>
+      <a-box
+        color="red"
+        position="2.5 1.6 -5"
+        height="3"
+        width="1"
+        rotation="45 15 0"
+        ><a-sphere color="red" radius="0.75" position="2.5 1.6 -5"></a-sphere
+      ></a-box>
+      <a-camera>
+        <a-text position="2.5 1.6 -5" color="green">Bra text</a-text>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
