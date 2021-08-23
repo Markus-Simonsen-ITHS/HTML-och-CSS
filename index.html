@@ -9,18 +9,55 @@
   </head>
   <body>
     <a-scene>
-      <a-sky color="blue"></a-sky>
+      <a-sky src="#sky"></a-sky>
       <a-box
-        color="red"
+        material="src: #grass"
         position="2.5 1.6 -5"
         height="3"
         width="1"
         rotation="45 15 0"
         ><a-sphere color="red" radius="0.75" position="2.5 1.6 -5"></a-sphere
       ></a-box>
-      <a-camera>
-        <a-text position="2.5 1.6 -5" color="green">Bra text</a-text>
-      </a-camera>
+
+      <a-assets>
+        <img alt="Grass" id="grass" src="grass.png" />
+        <img alt="Sky" id="sky" src="sky.jpg" />
+      </a-assets>
+      <a-image src="#grass" position="0 0 -4"></a-image>
+
+      <a-assets>
+        <a-asset-item
+          id="part1-obj"
+          src="HDU/HDU_lowRez_part1.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="part1-mtl"
+          src="HDU/HDU_lowRez_part1.mtl"
+        ></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item
+          id="part2-obj"
+          src="HDU/HDU_lowRez_part2.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="part2-mtl"
+          src="HDU/HDU_lowRez_part2.mtl"
+        ></a-asset-item>
+      </a-assets>
+
+      <a-obj-model
+        src="#part1-obj"
+        mtl="#part1-mtl"
+        scale="0.01 0.01 0.01"
+        position="0 0 -10"
+      ></a-obj-model>
+      <a-obj-model
+        src="#part2-obj"
+        mtl="#part2-mtl"
+        scale="0.01 0.01 0.01"
+        position="0 0 -10"
+      ></a-obj-model>
     </a-scene>
   </body>
 </html>
