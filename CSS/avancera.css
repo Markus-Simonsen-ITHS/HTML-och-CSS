@@ -1,4 +1,7 @@
-h1 {
-    color: #0000ff;
-    color: #000000e6;
+@font-face {
+  font-family: myFont;
+  src: url("RampartOne-Regular.ttf") format("truetype");
+}
+p {
+  font-family: "myFont";
 }
